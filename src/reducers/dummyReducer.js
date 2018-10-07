@@ -1,7 +1,8 @@
 const initialState = {
   word: 'World',
   sentense: 'Change to India',
-  data: []
+  data: [],
+  info: []
 }
 
 export default (state = initialState, action) => {
@@ -24,6 +25,12 @@ export default (state = initialState, action) => {
     return {
       ...state,
       data: action.payload
+    }
+
+  case 'INFO':
+    return {
+      ...state,
+      info: action.payload
     }
 
   default:

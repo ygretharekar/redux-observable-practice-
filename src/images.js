@@ -20,11 +20,13 @@ export class Images extends Component {
             {this.props.sentense}
           </h3>
           <div>
-            {this.props.data.map(
-              d => <p>
-                {d.title}
-              </p>
-            )}
+            {
+              this.props.data.map(
+                (d, i) => <p key={i}>
+                  {d.title}
+                </p>
+              )
+            }
           </div>
       </div>
     )
